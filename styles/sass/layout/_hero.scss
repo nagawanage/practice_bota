@@ -1,0 +1,59 @@
+.hero {
+  background: url(./../images/illustration.jpg) center bottom no-repeat;
+  background-size: cover;
+  height: 720px;
+  position: relative;
+
+  &__inner {
+    row-gap: 32px !important;
+    padding-top: 195px;
+    padding-bottom: 226px;
+    // min-width: 290px;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+  &__title {
+    color: $cBlack;
+    font-size: 32px;
+    font-weight: 400;
+    @include mq-up(md) {
+      font-size: 54px;
+    }
+  }
+  & .link-btn {
+    background-color: $cBtn;
+    color: $cWhite;
+    border: 2px solid $cWhite;
+    border-radius: 4px;
+    padding: 18px 58px;
+    width: 260px;
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 3px 6px rgba(9, 9, 9, 0.16);
+    & a {
+      color: $cWhite;
+    }
+  }
+}
+
+// divider
+.custom-shape-divider-bottom-1644136377 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1644136377 svg {
+  position: relative;
+  display: block;
+  width: calc(134% + 1.3px);
+  height: 128px;
+}
+
+.custom-shape-divider-bottom-1644136377 .shape-fill {
+  fill: #ffffff;
+}

@@ -1,0 +1,85 @@
+.l-container {
+  margin: 0 auto;
+  min-width: 320px;
+  overflow: hidden;
+}
+
+.l-heading {
+  padding-bottom: 32px !important;
+}
+
+.l-inner {
+  max-width: 1088px !important;
+  margin: 0 auto;
+  padding-right: 8vw; //幅375pxで30px
+  padding-left: 8vw; //幅375pxで30px
+  @include mq-up(lg) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  &--xs {
+    max-width: 780px;
+  }
+  &--sm {
+    max-width: 950px;
+  }
+  &--xl {
+    max-width: 1300px;
+  }
+}
+
+.l-section {
+  padding: 80px 0;
+}
+
+.l-mb-md {
+  margin-bottom: 40px !important;
+}
+
+.l-mb-lg {
+  margin-bottom: 80px !important;
+}
+
+.l-py-md {
+  padding: 50px 0;
+}
+
+.l-block-center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 12分割グリッド */
+.l-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 20px;
+  > * {
+    grid-column: 1 / -1;
+  }
+  @include mq-up(md) {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 16px;
+    row-gap: 28px;
+    > h2 + p {
+      grid-column: span 8; //8fr分だけ使う
+    }
+  }
+}
+
+.l-cols-mob2 > * {
+  grid-column: span 2; //2fr*2
+}
+@include mq-up(md) {
+  .l-cols-pc2 > * {
+    grid-column: span 6; //6fr*2
+  }
+  .l-cols-pc3 > * {
+    grid-column: span 4; //4fr*3
+  }
+  .l-cols-pc4 > * {
+    grid-column: span 3; //3fr*4
+  }
+}

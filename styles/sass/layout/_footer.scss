@@ -1,0 +1,97 @@
+.footer {
+  background-color: $cBgAqua;
+  border-top: solid 1px $cBlue;
+  position: relative;
+  padding: 80px 0;
+  padding-bottom: 40px;
+  min-width: 320px;
+  &__inner {
+    color: $cBlack;
+    margin: 0 8vw;
+    &.l-grid {
+      row-gap: 74px;
+    }
+  }
+  &__nav--wrapper {
+    &.l-grid {
+      row-gap: 32px;
+    }
+  }
+  & .nav__category {
+    // padding-bottom: 40px;
+    & h4 {
+      color: $cFooterPrime;
+      padding-bottom: 20px;
+    }
+    &__nav {
+      padding-bottom: 30px;
+    }
+  }
+  & .nav__list {
+    display: grid;
+  }
+  & .nav__item:not(:last-child) {
+    margin-bottom: 7px;
+  }
+  &__logo {
+    margin: 34px 0 14px;
+  }
+  &__profile,
+  &__sitemap--list {
+    font-size: 0.75em;
+  }
+  &__profile > img {
+    margin-bottom: 12px;
+  }
+  &__sitemap--list {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 14px;
+    justify-content: start;
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+  &__copyright {
+    font-size: 12px;
+    padding-left: 14px;
+  }
+
+  @include mq-up(md) {
+    padding-top: 60px;
+    &__inner {
+      width: 90%;
+      // max-width: 600px;
+    }
+    & .nav__list {
+      // flex-direction: row;
+    }
+    & .nav__item {
+      & > a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @include mq-up(lg) {
+    margin: 0;
+    &__inner {
+      width: 90%;
+      // max-width: 760px;
+    }
+    & .nav__item {
+      & > a {
+        font-size: 18px;
+      }
+    }
+    &__site {
+      justify-content: space-between;
+    }
+    &__copyright {
+      text-align: right;
+    }
+    &__sitemap {
+      align-self: end;
+      justify-self: end;
+    }
+  }
+}

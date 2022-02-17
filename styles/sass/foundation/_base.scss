@@ -1,0 +1,71 @@
+/******************************************************************
+ Stylesheet: ベーススタイル
+******************************************************************/
+body {
+  font: 1.5 sans-serif;
+  color: $cBlack;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  color: $cBlack;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  display: block;
+  padding: 0;
+}
+
+::selection {
+  background-color: $cDeepBlue;
+  color: #fff;
+}
+
+// 定義
+%font-sm {
+  font-size: 14px;
+}
+
+%font-md {
+  font-size: 26px;
+  @include mq-up(lg) {
+    font-size: 32px;
+  }
+}
+
+%font-lg {
+  font-size: 32px;
+  @include mq-up(lg) {
+    font-size: 54px;
+  }
+}
+
+%font-weight-lighter {
+  font-weight: 300;
+}
+
+.color-nav {
+  color: $cBlack;
+}
+
+.text {
+  line-height: 1.8;
+  @extend %font-sm;
+  @extend %font-weight-lighter;
+}
